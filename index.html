@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>照片牆</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+		/>
+		<!-- Link Swiper's CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+		/>
+        <link
+			rel="stylesheet"
+			href="week11.css"
+		/>
+		<!-- Demo styles -->
+		
+	</head>
+	<body>
+		<!-- Swiper -->
+        <div id="app">
+		<div class="swiper carousel">
+			<div class="swiper-wrapper">
+				<figure class="swiper-slide" v-for="(card,id) in cards">
+					<!-- <img src="./images/01.jpg" alt="" /> -->
+					<figcaption class="swiper-description">
+						<h2>{{card.title}}</h2>
+						<p>
+							410730997郭羽涵
+						</p>
+					</figcaption>
+                    <iframe v-bind:width="card.width" v-bind:height="card.height" v-bind:src="card.link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                   
+				</figure>
+				<!-- <figure class="swiper-slide">
+					<img src="./images/02.jpg" alt="" />
+					<figcaption class="swiper-description">
+						<h2>German Shepherd</h2>
+						<p>
+							The German Shepherd or Alsatian is a German breed of working dog
+							of medium to large size. The breed was developed by Max von
+							Stephanitz using various traditional German herding dogs from
+							1899.
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="swiper-slide">
+					<img src="./images/03.jpg" alt="" />
+					<figcaption class="swiper-description">
+						<h2>American Pit Bull</h2>
+						<p>
+							The American Pit Bull Terrier is a dog breed recognized by the
+							United Kennel Club and the American Dog Breeders Association, but
+							not the American Kennel Club.
+						</p>
+					</figcaption>
+				</figure>
+				<figure class="swiper-slide">
+					<img src="./images/04.jpg" alt="" />
+					<figcaption class="swiper-description">
+						<h2>Bulldog</h2>
+						<p>
+							The Bulldog is a British breed of dog of mastiff type. It may also
+							be known as the English Bulldog or British Bulldog. It is a medium
+							sized, muscular dog of around 40–55 lb.
+						</p>
+					</figcaption>
+				</figure> -->
+			</div>
+			<button type="button" class="swiper-button-next"></button>
+			<button type="button" class="swiper-button-prev"></button>
+			<div class="swiper-pagination"></div>
+		</div>
+    </div>
+
+    
+        <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.8/vue.min.js"></script>
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+		<!-- Initialize Swiper -->
+        <script src="week11.js"></script>
+		
+	</body>
+</html>
